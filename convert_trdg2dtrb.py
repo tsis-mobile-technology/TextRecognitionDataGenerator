@@ -77,7 +77,9 @@ def run(input_path, output_path):
         ext = os.path.splitext(item)[1]
 
         filename = os.path.join(image_folder_name, ('image_%0{}d'.format(digits) % idx) + ext)
-        gt_file.write('%s\t%s\n' % (filename, gt))
+        # path name delete in gt.txt file
+        filename_no_path = os.path.join(('image_%0{}d'.format(digits) % idx) + ext)
+        gt_file.write('%s\t%s\n' % (filename_no_path, gt))
         shutil.copy(item, os.path.join(output_path, filename))
 
     gt_file.close()
