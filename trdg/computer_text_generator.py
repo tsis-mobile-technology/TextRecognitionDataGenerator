@@ -42,6 +42,7 @@ def _generate_horizontal_text(
     text, font, text_color, font_size, space_width, character_spacing, fit, word_split, 
     stroke_width=0, stroke_fill="#282828"
 ):
+
     image_font = ImageFont.truetype(font=font, size=font_size)
 
     space_width = int(image_font.getsize(" ")[0] * space_width)
