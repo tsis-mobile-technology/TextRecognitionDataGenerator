@@ -7,6 +7,7 @@ python trdg/run.py -c 50000 -dt './trdg/dicts/ko_insurance.txt' --output_dir '..
 python convert_trdg2dtrb.py --input_path ../aihub_data/self_out_trdg --output_path ../aihub_data/self_1_data
 
 
+
 #sample
 python trdg/run.py -c 100 -dt './trdg/dicts/ko_insurance.txt' --output_dir './out' -l ko --thread_count 2
 python trdg/run.py -c 100 -dt './trdg/dicts/ko.txt' --output_dir './out' -l ko --thread_count 2
