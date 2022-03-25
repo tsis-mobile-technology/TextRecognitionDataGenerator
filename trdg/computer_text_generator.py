@@ -17,6 +17,7 @@ def generate(
     stroke_fill="#282828",
 ):
     if orientation == 0:
+
         return _generate_horizontal_text(
             text,
             font,
@@ -44,7 +45,10 @@ def _generate_horizontal_text(
 ):
 
     image_font = ImageFont.truetype(font=font, size=font_size)
-
+    print(font)
+    print(">", image_font)
+    print(">>", image_font.getsize(" ")[0])
+    print(">>>", space_width)
     space_width = int(image_font.getsize(" ")[0] * space_width)
 
     if word_split:
